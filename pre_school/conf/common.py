@@ -13,31 +13,50 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dc@igf3wopbn+y*ff3z8w8ft(68w+-!vd&&=$nnre7qo8yyw#x'
+# SECRET_KEY = 'django-insecure-dc@igf3wopbn+y*ff3z8w8ft(68w+-!vd&&=$nnre7qo8yyw#x'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
 
-INSTALLED_APPS = [
+""" INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+] """
+
+DJANGO_APPS=[
+     'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
 ]
+
+THIRD_PARTY_APPS = []
+
+APPS = []
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + APPS
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
