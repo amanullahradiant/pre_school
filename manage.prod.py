@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pre_school.conf.dev') #lets change the default here as well 
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pre_school.conf.prod') #lets change the default here as well 
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

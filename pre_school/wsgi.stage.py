@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pre_school.conf.dev') # lets change the default setting module. from wsgi -> conf.dev.py
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pre_school.conf.stage') # lets change the default setting module. from wsgi -> conf.stage.py
 
 application = get_wsgi_application()
